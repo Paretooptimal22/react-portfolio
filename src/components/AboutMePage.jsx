@@ -10,7 +10,7 @@ function AboutMePage() {
         <section id="about" className="mb-8">
           <h1 className="text-4xl font-bold mb-4">About Me</h1>
 
-          <div className="flex items-center">
+          <div className="flex items-start">
             {/* Image */}
             <img
               src="/me.jpeg"  // Replace this with the actual path to your image
@@ -19,9 +19,18 @@ function AboutMePage() {
             />
 
             {/* Text */}
-            <p className="text-2xl">
-              Hello! I'm Kevin, a full-stack web developer based in Japan. I have experience working with React, Rails, and more. I love creating applications that make life easier.
-            </p>
+            <div>
+              <p className="text-2xl mb-4">
+                Hello! I'm Kevin, a full-stack web developer based in Japan. I have experience working with React, Rails,
+                 and more. I love creating applications that make life easier.
+              </p>
+
+              <p className="text-2xl">
+              When I am not coding, I like to play sports, exercise, take photos, study Japanese, and learn new technologies!
+              </p>
+            </div>
+
+
           </div>
 
         </section>
