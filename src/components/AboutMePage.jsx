@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
 import '../assets/AboutMePage.css'; // Adjust the path to the CSS file
 
 function AboutMePage() {
@@ -63,21 +65,33 @@ function AboutMePage() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="mb-8">
-        <h2 className="text-3xl font-bold mb-4">Projects</h2>
-        <p className="text-lg">
-          Here are some of the projects I've worked on, including a dating app, a video game rental service, and a recruiting app for founders.
-        </p>
-      </section>
-
       {/* Contact Section */}
       <section id="contact">
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
-        <p className="text-lg">
-          Feel free to reach out to me on LinkedIn or via email!
-        </p>
+
+        {/* Make the container flex */}
+        <div className="flex flex-row items-center space-x-4">
+          <a
+            href="https://github.com/Paretooptimal22"
+            className="flex items-center text-xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} className="w-5 h-5 mr-2" /> {/* GitHub icon */}
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kevincyoung/"
+            className="flex items-center text-xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" /> {/* LinkedIn icon */}
+            LinkedIn
+          </a>
+        </div>
       </section>
+
     </main>
   );
 }
