@@ -1,7 +1,15 @@
 import React from 'react';
 import { InformationCircleIcon, UserCircleIcon, Bars3Icon } from '@heroicons/react/24/solid';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
+  const navigate = useNavigate(); // useNavigate to programmatically navigate and close the menu
+
+  const handleLinkClick = (path) => {
+    navigate(path); // Navigate to the path
+    toggleMobileMenu(); // Close the mobile menu after navigating
+  };
+
   return (
     <>
       {/* Sidebar for medium and larger screens */}
@@ -11,15 +19,11 @@ const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
           <ul>
             <li className="mb-2 flex items-center hover:bg-slate-400 rounded">
               <UserCircleIcon className="w-5 h-5 mr-2" />
-              <a href="#about" className="block py-2 px-4">
-                About Me
-              </a>
+              <Link to="/" className="block py-2 px-4">About Me</Link>
             </li>
             <li className="mb-2 flex items-center hover:bg-slate-400 rounded">
               <InformationCircleIcon className="w-5 h-5 mr-2" />
-              <a href="#projects" className="block py-2 px-4">
-                Projects
-              </a>
+              <Link to="/projects" className="block py-2 px-4">Projects</Link>
             </li>
           </ul>
         </nav>
@@ -30,10 +34,7 @@ const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold">Kevin Young</div>
           {/* Dropdown button for mobile navbar */}
-          <button
-            className="text-black focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
+          <button className="text-black focus:outline-none" onClick={toggleMobileMenu}>
             <Bars3Icon className="w-6 h-6" />
           </button>
         </div>
@@ -43,15 +44,17 @@ const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             <ul>
               <li className="mb-2 flex items-center hover:bg-slate-400 rounded">
                 <UserCircleIcon className="w-5 h-5 mr-2" />
-                <a href="#about" className="block py-2 px-4">
+                {/* Handle link click and close mobile menu */}
+                <button onClick={() => handleLinkClick('/')} className="block py-2 px-4">
                   About Me
-                </a>
+                </button>
               </li>
               <li className="mb-2 flex items-center hover:bg-slate-400 rounded">
                 <InformationCircleIcon className="w-5 h-5 mr-2" />
-                <a href="#projects" className="block py-2 px-4">
+                {/* Handle link click and close mobile menu */}
+                <button onClick={() => handleLinkClick('/projects')} className="block py-2 px-4">
                   Projects
-                </a>
+                </button>
               </li>
             </ul>
           </div>
