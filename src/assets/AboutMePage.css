@@ -1,13 +1,17 @@
-/* Highlight animation */
+/* Initial state before the animation */
 .highlight {
   background-color: transparent;
-  transition: background-color 0.5s ease
+  background-size: 200% 100%; /* The background gradient starts out twice the width */
+  background-position: -100% 0; /* Start the gradient completely off the left */
+  transition: background-position 0.5s ease-out;
 }
 
+/* When the highlight is animated */
 .highlight-animate {
-  background: linear-gradient(to right, #00c6ff, #0072ff); /* A warm, sunset-like gradient */
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Cool ocean gradient */
+  background-size: 200% 100%; /* The background gradient is twice the width */
+  background-position: 0 0; /* Move the gradient into place from left to right */
   -webkit-background-clip: text;
-  background-clip: text; /* Standard version */
-  -webkit-text-fill-color: transparent; /* This keeps the gradient within the text */
-  padding: 0.2em;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -17,13 +17,15 @@ function AboutMePage() {
       // Get the paragraph's text content
       let innerHTML = aboutTextRef.current.innerHTML;
 
-      // The keywords you want to bold and highlight
+      // The keywords you want to highlight
       const keywords = ['full-stack web developer', 'React', 'Rails', 'Japan', 'applications'];
 
-      // Add bold styling to the keywords
+      // Wrap each keyword with a span
       keywords.forEach((word) => {
         const styledWord = `<span class="highlight">${word}</span>`;
-        innerHTML = innerHTML.replace(new RegExp(`(${word})`, 'gi'), styledWord);
+        if (!innerHTML.includes(styledWord)) {
+          innerHTML = innerHTML.replace(new RegExp(`(${word})`, 'gi'), styledWord);
+        }
       });
 
       // Update the paragraph's innerHTML with the new changes
@@ -32,7 +34,7 @@ function AboutMePage() {
       // Gradually add the highlight class to each keyword
       const highlightElements = document.querySelectorAll('.highlight');
       const initialDelay = 500; // 1-second delay for the first keyword
-      const intervalDelay = 300; // 500ms delay between each subsequent keyword
+      const intervalDelay = 500; // 500ms delay between each subsequent keyword
 
       highlightElements.forEach((element, index) => {
         setTimeout(() => {
@@ -55,17 +57,17 @@ function AboutMePage() {
             <img
               src="/me.jpeg" // Replace this with the actual path to your image
               alt="Kevin Young"
-              className="w-48 h-48 rounded-lg mb-4 md:mb-0 md:mr-6"
+              className="size-72 rounded-lg mb-4 md:mb-0 md:mr-6 shadow-lg"
             />
 
             {/* Text */}
             <div>
-              <p ref={aboutTextRef} className="text-2xl mb-4 font-bold">
+              <p ref={aboutTextRef} className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
                 Hello! I'm Kevin, a full-stack web developer based in Japan. I have experience working with React, Rails,
                 and more. I love creating applications that make life easier.
               </p>
 
-              <p className="text-2xl font-bold">
+              <p className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
                 When I am not coding, I like to play sports, exercise, take photos, study Japanese, and learn new technologies!
               </p>
             </div>
