@@ -1,0 +1,13 @@
+/* Highlight animation */
+.highlight {
+  background-color: transparent;
+  transition: background-color 0.5s ease
+}
+
+.highlight-animate {
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* A warm, sunset-like gradient */
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard version */
+  -webkit-text-fill-color: transparent; /* This keeps the gradient within the text */
+  padding: 0.2em;
+}

@@ -5,7 +5,7 @@ const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
   return (
     <>
       {/* Sidebar for medium and larger screens */}
-      <aside className="w-64 bg-slate-200 text-black p-4 hidden md:block">
+      <aside className="w-64 border text-black p-4 hidden md:block">
         <div className="text-2xl font-bold mb-4">Kevin Young</div>
         <nav>
           <ul>
@@ -26,7 +26,7 @@ const Sidebar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
       </aside>
 
       {/* Navbar for small screens */}
-      <nav className="bg-slate-200 p-4 block md:hidden">
+      <nav className="border p-4 block md:hidden">
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold">Kevin Young</div>
           {/* Dropdown button for mobile navbar */}
