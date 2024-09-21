@@ -4,7 +4,7 @@ import React from 'react';
 const ProjectCard = ({ image, name, details, description, githubLink }) => {
   return (
     <a href={githubLink} target="_blank" rel="noopener noreferrer" className="block">
-      <div className="h-full flex flex-col rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow duration-300">
+      <div className="h-full flex flex-col rounded overflow-hidden shadow-xl bg-white hover:shadow-2xl transition-shadow duration-300">
         {/* Project Image */}
         <img className="w-full h-48 object-cover object-top" src={image} alt={name} />
 

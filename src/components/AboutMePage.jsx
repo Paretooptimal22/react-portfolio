@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
 import '../assets/AboutMePage.css'; // Adjust the path to the CSS file
+import Me from '../assets/images/me.jpeg';
 
 function AboutMePage() {
   const aboutTextRef = useRef(null); // Create a ref for the paragraph
@@ -46,7 +47,7 @@ function AboutMePage() {
         <div className="flex flex-col md:flex-row items-start">
           {/* Image */}
           <img
-            src="/me.jpeg" // Replace this with the actual path to your image
+            src={Me} // Replace this with the actual path to your image
             alt="Kevin Young"
             className="size-72 rounded-lg mb-4 md:mb-0 md:mr-6 shadow-lg"
           />
