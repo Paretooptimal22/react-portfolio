@@ -77,7 +77,7 @@ function AboutMePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} className="w-5 h-5 mr-2" /> {/* GitHub icon */}
+            <FontAwesomeIcon icon={faGithub} className="size-6 mr-2" /> {/* GitHub icon */}
             GitHub
           </a>
           <a
@@ -86,7 +86,7 @@ function AboutMePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" /> {/* LinkedIn icon */}
+            <FontAwesomeIcon icon={faLinkedin} className="size-6 mr-2" /> {/* LinkedIn icon */}
             LinkedIn
           </a>
         </div>
