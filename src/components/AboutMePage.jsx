@@ -70,10 +70,10 @@ function AboutMePage() {
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
 
         {/* Make the container flex */}
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-row items-center space-x-4 ">
           <a
             href="https://github.com/Paretooptimal22"
-            className="flex items-center text-xl"
+            className="flex items-center text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r from-sky-300 to-blue-300 duration-300 ... rounded"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -82,7 +82,7 @@ function AboutMePage() {
           </a>
           <a
             href="https://www.linkedin.com/in/kevincyoung/"
-            className="flex items-center text-xl"
+            className="flex items-center text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r from-sky-300 to-blue-300 duration-300 ... rounded"
             target="_blank"
             rel="noopener noreferrer"
           >
