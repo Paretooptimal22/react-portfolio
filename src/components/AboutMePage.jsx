@@ -14,7 +14,7 @@ function AboutMePage() {
       let innerHTML = aboutTextRef.current.innerHTML;
 
       // The keywords you want to highlight
-      const keywords = ['full-stack web developer', 'React', 'Rails', 'Japan', 'applications'];
+      const keywords = ['web developer', 'React', 'Rails', 'Japan', 'applications'];
 
       // Wrap each keyword with a span
       keywords.forEach((word) => {
@@ -55,12 +55,12 @@ function AboutMePage() {
           {/* Text */}
           <div>
             <p ref={aboutTextRef} className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              Hello! I'm Kevin, a full-stack web developer based in Japan. I have experience working with React, Rails,
+              Hello! I'm Kevin, a web developer based in Japan. I have experience working with React, Rails,
               and more. I love creating applications that make life easier.
             </p>
 
             <p className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              When I am not coding, I like to play sports, exercise, take photos, study Japanese, and learn new technologies!
+              When I am not coding, I like to exercise, take photos, study Japanese, and learn new technologies!
             </p>
           </div>
         </div>
