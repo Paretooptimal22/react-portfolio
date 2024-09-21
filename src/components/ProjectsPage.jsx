@@ -12,12 +12,14 @@ function ProjectsPage() {
       image: PRMImage, // Replace with your actual image path
       details: 'Team: 4 members | Duration: 2 weeks',
       description: 'A modern relationship management app built with Rails that helps users manage their personal network.',
+      githubLink: 'https://github.com/jpblicer/PRM'
     },
     {
       name: 'Game Vault',
       image: GameVaultImage, // Replace with your actual image path
       details: 'Team: 4 members | Duration: 5 days',
       description: 'An app that allows users to rent and offer video games for rent. Built with Rails.',
+      githubLink: 'https://github.com/Paretooptimal22/game-vault'
     },
 
   ];
@@ -35,6 +37,7 @@ function ProjectsPage() {
             name={project.name}
             details={project.details}
             description={project.description}
+            githubLink={project.githubLink}
           />
         ))}
       </div>
