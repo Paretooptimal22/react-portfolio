@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     open: true // Automatically opens the browser when you run the dev server
   },
-  base: '/',
+  base: '/react-portfolio/',
   build: {
     outDir: 'dist', // Output directory for the build (default is "dist")
   },
