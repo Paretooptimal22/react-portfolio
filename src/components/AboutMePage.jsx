@@ -55,12 +55,12 @@ function AboutMePage() {
           {/* Text */}
           <div>
             <p ref={aboutTextRef} className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              Hello! I'm Kevin, a web developer based in Japan. I have experience working with React, Rails,
+              Hello! I'm Kevin, a web developer with experience working with React, Rails,
               and more. I love creating applications that make life easier.
             </p>
 
             <p className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              When I am not coding, I like to exercise, take photos, study Japanese, and learn new technologies!
+              When I am not coding, I like to exercise, play sports, study Japanese, and learn new technologies!
             </p>
           </div>
         </div>
