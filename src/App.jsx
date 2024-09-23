@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <Router basename="/react-portfolio">
+    <Router>
       <div className="flex flex-col md:flex-row min-h-screen">
         {/* Sidebar on the left */}
         <Sidebar isMobileMenuOpen={isMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
