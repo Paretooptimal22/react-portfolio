@@ -3,10 +3,18 @@ import ProjectCard from './ProjectCard';
 
 // Import the images directly
 import PRMImage from '../assets/images/PRM2.png';
-import GameVaultImage from '../assets/images/gamevault.png'
+import GameVaultImage from '../assets/images/gamevault.png';
+import MERNProduct from '../assets/images/mernProduct.png';
 
 function ProjectsPage() {
   const projects = [
+    {
+      name: 'MERN Product Store',
+      image: MERNProduct, // Replace with your actual image path
+      details: 'Team: 1 member | Duration: 2 days',
+      description: 'Using MERN stack and Vite, this is a sleek Product store that handles CRUD.',
+      githubLink: 'https://github.com/Paretooptimal22/mern-product-store'
+    },
     {
       name: 'PRM - Personal Relationship Management',
       image: PRMImage, // Replace with your actual image path
