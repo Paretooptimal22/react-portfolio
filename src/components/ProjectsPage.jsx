@@ -1,35 +1,46 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import ProjectCard from "./ProjectCard";
 
 // Import the images directly
-import PRMImage from '../assets/images/PRM2.png';
-import GameVaultImage from '../assets/images/gamevault.png';
-import MERNProduct from '../assets/images/mernProduct.png';
+import PRMImage from "../assets/images/PRM2.png";
+import GameVaultImage from "../assets/images/gamevault.png";
+import MERNProduct from "../assets/images/mernProduct.png";
+import xClone from "../assets/images/xClone.png";
 
 function ProjectsPage() {
   const projects = [
     {
-      name: 'MERN Product Store',
+      name: "X Clone",
+      image: xClone, // Replace with your actual image path
+      details: "Team: 1 member | Duration: 7 days",
+      description:
+        "MERN stack and TailwindCSS: made a clone of X. Features include: auth w/ JWT, React Query for data fetching and caching, suggest users, create posts, delete posts, commenting on posts, liking posts, edit profile, image uploads w/ Cloudinary, and notifications.",
+      link: "https://x-clone-rzzc.onrender.com/profile/therock",
+    },
+    {
+      name: "MERN Product Store",
       image: MERNProduct, // Replace with your actual image path
-      details: 'Team: 1 member | Duration: 2 days',
-      description: 'Using MERN stack and Vite, this is a sleek Product store that handles CRUD.',
-      link: 'https://mern-product-store-zakd.onrender.com/'
+      details: "Team: 1 member | Duration: 2 days",
+      description:
+        "Using MERN stack and Vite, this is a sleek Product store that handles CRUD.",
+      link: "https://mern-product-store-zakd.onrender.com/",
     },
     {
-      name: 'PRM - Personal Relationship Management',
+      name: "PRM - Personal Relationship Management",
       image: PRMImage, // Replace with your actual image path
-      details: 'Team: 4 members | Duration: 2 weeks',
-      description: 'A modern relationship management app built with Rails that helps users manage their personal network.',
-      link: 'https://www.theprm.tech/'
+      details: "Team: 4 members | Duration: 2 weeks",
+      description:
+        "A modern relationship management app built with Rails that helps users manage their personal network.",
+      link: "https://www.theprm.tech/",
     },
     {
-      name: 'Game Vault',
+      name: "Game Vault",
       image: GameVaultImage, // Replace with your actual image path
-      details: 'Team: 4 members | Duration: 5 days',
-      description: 'An app that allows users to rent and offer video games for rent. Built with Rails.',
-      link: 'https://github.com/Paretooptimal22/game-vault'
+      details: "Team: 4 members | Duration: 5 days",
+      description:
+        "An app that allows users to rent and offer video games for rent. Built with Rails.",
+      link: "https://github.com/Paretooptimal22/game-vault",
     },
-
   ];
 
   return (
