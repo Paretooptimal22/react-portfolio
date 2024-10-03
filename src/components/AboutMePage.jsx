@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
-import '../assets/AboutMePage.css'; // Adjust the path to the CSS file
-import Me from '../assets/images/me.jpeg';
+import React, { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Import the GitHub icon
+import "../assets/AboutMePage.css"; // Adjust the path to the CSS file
+import Me from "../assets/images/me.jpeg";
 
 function AboutMePage() {
   const aboutTextRef = useRef(null); // Create a ref for the paragraph
@@ -14,13 +14,24 @@ function AboutMePage() {
       let innerHTML = aboutTextRef.current.innerHTML;
 
       // The keywords you want to highlight
-      const keywords = ['web developer', 'React', 'Rails', 'Japan', 'applications'];
+      const keywords = [
+        "web developer",
+        "React",
+        "Rails",
+        "Japan",
+        "applications",
+        "front-end",
+        "back-end",
+      ];
 
       // Wrap each keyword with a span
       keywords.forEach((word) => {
         const styledWord = `<span class="highlight">${word}</span>`;
         if (!innerHTML.includes(styledWord)) {
-          innerHTML = innerHTML.replace(new RegExp(`(${word})`, 'gi'), styledWord);
+          innerHTML = innerHTML.replace(
+            new RegExp(`(${word})`, "gi"),
+            styledWord
+          );
         }
       });
 
@@ -28,13 +39,13 @@ function AboutMePage() {
       aboutTextRef.current.innerHTML = innerHTML;
 
       // Gradually add the highlight class to each keyword
-      const highlightElements = document.querySelectorAll('.highlight');
+      const highlightElements = document.querySelectorAll(".highlight");
       const initialDelay = 500; // 1-second delay for the first keyword
       const intervalDelay = 500; // 500ms delay between each subsequent keyword
 
       highlightElements.forEach((element, index) => {
         setTimeout(() => {
-          element.classList.add('highlight-animate');
+          element.classList.add("highlight-animate");
         }, initialDelay + index * intervalDelay); // Delay for the first keyword + interval for others
       });
     }
@@ -54,13 +65,18 @@ function AboutMePage() {
 
           {/* Text */}
           <div>
-            <p ref={aboutTextRef} className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              Hello! I'm Kevin, a web developer with experience working with React, Rails,
-              and more. I love creating applications that make life easier.
+            <p
+              ref={aboutTextRef}
+              className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold"
+            >
+              Hello! I'm Kevin, a web developer with a strong foundation in
+              front-end and back-end technologies. I am passionate about
+              creating applications that make life easier.
             </p>
 
             <p className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold">
-              When I am not coding, I like to exercise, play sports, study Japanese, and learn new technologies!
+              When I am not coding, I like to exercise, study Japanese, and
+              learn new technologies!
             </p>
           </div>
         </div>
@@ -78,7 +94,8 @@ function AboutMePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} className="size-6 mr-2" /> {/* GitHub icon */}
+            <FontAwesomeIcon icon={faGithub} className="size-6 mr-2" />{" "}
+            {/* GitHub icon */}
             GitHub
           </a>
           <a
@@ -87,12 +104,12 @@ function AboutMePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="size-6 mr-2" /> {/* LinkedIn icon */}
+            <FontAwesomeIcon icon={faLinkedin} className="size-6 mr-2" />{" "}
+            {/* LinkedIn icon */}
             LinkedIn
           </a>
         </div>
       </section>
-
     </main>
   );
 }
