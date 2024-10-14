@@ -80,14 +80,14 @@ function AboutMe() {
 
             <p
               ref={aboutTextRef2}
-              className="text-xl sm:text-2xl md:text-3xl mb-4 font-bold"
+              className="text-xl sm:text-2xl md:text-3xl mb-4 font-semibold"
             >
               I'm a web developer with a strong foundation in front-end and
               back-end technologies. I am passionate about creating applications
               that make life easier.
             </p>
 
-            <p className="text-xl sm:text-2xl md:text-3xl mb-4 font-bold">
+            <p className="text-xl sm:text-2xl md:text-3xl mb-4 font-semibold">
               When I am not coding, I like to exercise, study Japanese, and
               learn new technologies!
             </p>
