@@ -6,7 +6,7 @@ import PRMImage from "../assets/images/PRM2.png";
 import GameVaultImage from "../assets/images/gamevault.png";
 import MERNProduct from "../assets/images/mernProduct.png";
 import xClone from "../assets/images/xClone.png";
-import chattApp from "../assets/images/chatApp.png";
+import chatApp from "../assets/images/chatApp.png";
 
 function Projects() {
   const projects = [
