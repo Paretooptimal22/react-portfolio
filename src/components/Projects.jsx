@@ -6,16 +6,25 @@ import PRMImage from "../assets/images/PRM2.png";
 import GameVaultImage from "../assets/images/gamevault.png";
 import MERNProduct from "../assets/images/mernProduct.png";
 import xClone from "../assets/images/xClone.png";
+import chattApp from "../assets/images/chatApp.png";
 
 function Projects() {
   const projects = [
+    {
+      name: "Chat App",
+      image: chatApp, // Replace with your actual image path
+      details: "Team: 1 member | Duration: 2 weeks",
+      description:
+        "Chat app built with TypeScript + Socket.io + Prisma + TailwindCSS + PostgreSQL + Express + React + Node",
+      link: "https://pern-chat-app-m493.onrender.com/",
+    },
     {
       name: "X Clone",
       image: xClone, // Replace with your actual image path
       details: "Team: 1 member | Duration: 7 days",
       description:
         "MERN stack and TailwindCSS: made a clone of X. Features include: auth w/ JWT, React Query for data fetching and caching, suggest users, create posts, delete posts, commenting on posts, liking posts, edit profile, image uploads w/ Cloudinary, and notifications.",
-      link: "https://x-clone-rzzc.onrender.com/profile/therock",
+      link: "https://x-clone-rzzc.onrender.com/",
     },
     {
       name: "MERN Product Store",
@@ -44,11 +53,11 @@ function Projects() {
   ];
 
   return (
-    <div className=" flex-1 px-6 pb-6">
-      <h1 className="text-4xl font-bold mb-4">Projects</h1>
+    <div className="flex-1 px-6 pb-6 ">
+      <h1 className="mb-4 text-4xl font-bold">Projects</h1>
 
       {/* Project Cards Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
