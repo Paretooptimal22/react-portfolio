@@ -7,9 +7,17 @@ import GameVaultImage from "../assets/images/gamevault.png";
 import MERNProduct from "../assets/images/mernProduct.png";
 import xClone from "../assets/images/xClone.png";
 import chatApp from "../assets/images/chatApp.png";
+import pythonChat from "../assets/images/pythonChat.png";
 
 function Projects() {
   const projects = [
+    {
+      name: "Python Chat App",
+      image: pythonChat, // Replace with your actual image path
+      details: "Team: 1 member | Duration: 2 weeks",
+      description: "Simple Chat app built with JavaScript + Python + Socket.io",
+      link: "https://python-chat-app-zsgd.onrender.com/",
+    },
     {
       name: "Chat App",
       image: chatApp, // Replace with your actual image path
